@@ -1,4 +1,3 @@
-import { Link as RouterLink } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
 interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {

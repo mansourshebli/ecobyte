@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { User } from 'firebase/auth';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Search, Tag, Trash2, ChevronDown, ChevronUp, Leaf, Droplets, Zap, Wind, Sun, TreeDeciduous, Recycle, Factory } from 'lucide-react';
+import {Search, Trash2, ChevronDown, ChevronUp, Leaf, Droplets, Zap, Wind, Sun, TreeDeciduous, Recycle, Factory } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { db } from '@/lib/firebase';
 import { collection, addDoc, deleteDoc, doc, onSnapshot, query, orderBy } from 'firebase/firestore';
@@ -39,7 +39,7 @@ const tagColors = {
 export function Nova({ user }: NovaProps) {
   const [notes, setNotes] = useState<Note[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedTags] = useState<string[]>([]);
   const [expandedNoteId, setExpandedNoteId] = useState<string | null>(null);
   const [newNote, setNewNote] = useState({
     title: '',

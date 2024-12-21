@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card';
-import { BarChart3, MapPin, FileUp } from 'lucide-react';
+import { BarChart3, FileUp } from 'lucide-react';
 
 export function AnalysisTools() {
   return (

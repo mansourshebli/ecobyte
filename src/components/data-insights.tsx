@@ -4,13 +4,9 @@ import { useState, useEffect, useRef } from 'react';
 import {
   TreeDeciduous,
   Mountain,
-  Users,
-  Target,
-  Award,
   TrendingUp,
   ChevronDown,
   ChevronUp,
-  Bot,
   BarChart3,
   Leaf,
   NotebookPen,

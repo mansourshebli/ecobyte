@@ -17,7 +17,6 @@ export function FeatureCard({
   title,
   name,
   description,
-  color,
   gradient,
   index,
   isLoaded,

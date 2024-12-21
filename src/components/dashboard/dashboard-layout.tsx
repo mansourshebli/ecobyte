@@ -75,7 +75,6 @@ export function DashboardLayout() {
 
           {features.map((feature) => (
             <TabsContent key={feature.id} value={feature.id} className="space-y-4">
-              <feature.component />
             </TabsContent>
           ))}
         </Tabs>

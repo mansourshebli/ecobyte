@@ -37,7 +37,7 @@ const generateIoTData = () => ({
   co2Offset: Math.floor(2 + Math.random() * 4), // 2-6kg
 });
 
-export function BiocharBin({ user }: BiocharBinProps) {
+export function BiocharBin({ }: BiocharBinProps) {
   const [iotData, setIoTData] = useState(generateIoTData());
   const [loading, setLoading] = useState(false);
   const [updates, setUpdates] = useState<Update[]>([]);

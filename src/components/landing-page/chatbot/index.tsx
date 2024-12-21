@@ -5,8 +5,6 @@ import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Bot, Send, X, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Message } from './types';
-import { MessageList } from './message-list';
 import { useChat } from './use-chat';
 
 export function LandingChatbot() {

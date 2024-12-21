@@ -87,7 +87,7 @@ export function Dashboard({ user }: DashboardProps) {
                 {user?.email}
               </p>
             </div>
-            <UserNav user={user} />
+            {user && <UserNav user={user} />}
           </div>
         </div>
 
@@ -109,7 +109,13 @@ export function Dashboard({ user }: DashboardProps) {
 
           {features.map((feature) => (
             <TabsContent key={feature.id} value={feature.id} className="space-y-4">
-              <feature.component user={user} />
+              {user ? (
+                <feature.component user={user} />
+              ) : (
+                <div className="text-center text-gray-600 dark:text-gray-300">
+                  <p>Please sign in to access this feature.</p>
+                </div>
+              )}
             </TabsContent>
           ))}
         </Tabs>

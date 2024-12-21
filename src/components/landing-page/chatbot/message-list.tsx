@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Loader2 } from 'lucide-react';
+import { Bot} from 'lucide-react';
 import { Message } from './types';
 import { cn } from '@/lib/utils';
 

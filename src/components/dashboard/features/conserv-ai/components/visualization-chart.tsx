@@ -49,7 +49,7 @@ export function VisualizationChart({ visualization }: VisualizationChartProps) {
               paddingAngle={5}
               dataKey="value"
             >
-              {visualization.data.map((entry: any, index: number) => (
+              {visualization.data.map((index: number) => (
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
               ))}
             </Pie>

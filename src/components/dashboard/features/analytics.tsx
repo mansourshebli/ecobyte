@@ -33,7 +33,7 @@ const impactData = [
   { name: 'Soil Enhancement', value: 10, color: '#f59e0b' },
 ];
 
-export function Analytics({ user }: AnalyticsProps) {
+export function Analytics({ }: AnalyticsProps) {
   return (
     <div className="grid gap-6">
       <div className="grid gap-6 md:grid-cols-3">

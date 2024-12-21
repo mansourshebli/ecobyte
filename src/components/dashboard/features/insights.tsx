@@ -1,11 +1,6 @@
-import { User } from 'firebase/auth';
 import { Card } from '@/components/ui/card';
 
-interface InsightsProps {
-  user: User;
-}
-
-export function Insights({ user }: InsightsProps) {
+export function Insights() {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
       <Card className="flex flex-col overflow-hidden">

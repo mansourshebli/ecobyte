@@ -14,12 +14,10 @@ import { auth } from '@/lib/firebase';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Profile } from '@/components/dashboard/features/profile';
 
+import { User as FirebaseUser } from 'firebase/auth';
+
 interface UserNavProps {
-  user: {
-    displayName: string | null;
-    email: string | null;
-    photoURL: string | null;
-  };
+  user: FirebaseUser;
 }
 
 export function UserNav({ user }: UserNavProps) {

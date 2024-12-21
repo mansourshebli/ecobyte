@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import { useAnimation, VariantProps } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 
 export const fadeInVariants = {

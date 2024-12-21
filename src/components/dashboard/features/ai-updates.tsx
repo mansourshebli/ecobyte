@@ -1,13 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import { User } from 'firebase/auth';
 import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Camera,
-  Upload,
   Loader2,
   Bot,
   Recycle,
@@ -35,7 +33,7 @@ interface AIUpdatesProps {
 
 const COLORS = ['#22c55e', '#3b82f6', '#ef4444'];
 
-export function AIUpdates({ user }: AIUpdatesProps) {
+export function AIUpdates({}: AIUpdatesProps) {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [classificationResult, setClassificationResult] = useState<any>(null);
@@ -293,7 +291,7 @@ export function AIUpdates({ user }: AIUpdatesProps) {
                     paddingAngle={5}
                     dataKey="value"
                   >
-                    {wasteComposition.map((entry, index) => (
+                    {wasteComposition.map((index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>

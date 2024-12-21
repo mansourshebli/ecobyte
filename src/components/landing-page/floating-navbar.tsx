@@ -26,7 +26,7 @@ export function FloatingNavbar({ user, onDashboard }: FloatingNavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleFeatureClick = (feature: string) => {
+  const handleFeatureClick = () => {
     if (user) {
       onDashboard();
     } else {
@@ -35,10 +35,10 @@ export function FloatingNavbar({ user, onDashboard }: FloatingNavbarProps) {
   };
 
   const navItems = [
-    { icon: Bot, label: 'Nova AI', feature: 'nova' },
-    { icon: ActivitySquare, label: 'Monitoring', feature: 'monitoring' },
-    { icon: BarChart3, label: 'Analytics', feature: 'analytics' },
-    { icon: Sparkles, label: 'AI Updates', feature: 'ai-updates' },
+    { icon: Bot, label: 'Nova AI' },
+    { icon: ActivitySquare, label: 'Monitoring' },
+    { icon: BarChart3, label: 'Analytics' },
+    { icon: Sparkles, label: 'AI Updates' },
   ];
 
   return (
@@ -55,7 +55,7 @@ export function FloatingNavbar({ user, onDashboard }: FloatingNavbarProps) {
               key={item.label}
               variant="ghost"
               size="sm"
-              onClick={() => handleFeatureClick(item.feature)}
+              onClick={handleFeatureClick}
               className={cn(
                 'rounded-full text-gray-600/90 hover:bg-emerald-50/50 hover:text-emerald-600 dark:text-gray-300/90 dark:hover:bg-emerald-900/50 dark:hover:text-emerald-400',
                 'flex items-center gap-2 px-3',

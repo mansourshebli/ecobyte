@@ -9,7 +9,7 @@ interface FeatureCardProps {
   bgColor: string;
 }
 
-export function FeatureCard({ title, description, icon: Icon, color, bgColor }: FeatureCardProps) {
+export function FeatureCard({ title, description, icon: Icon, bgColor }: FeatureCardProps) {
   return (
     <div className={cn(
       "group relative overflow-hidden rounded-2xl p-6 shadow-lg transition-all hover:shadow-xl",

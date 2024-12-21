@@ -7,7 +7,7 @@ interface AnalyticsProps {
   user: User;
 }
 
-export function Analytics({ user }: AnalyticsProps) {
+export function Analytics({ }: AnalyticsProps) {
   return (
     <div className="grid gap-6">
       <MetricsGrid />

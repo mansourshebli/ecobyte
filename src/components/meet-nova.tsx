@@ -1,4 +1,4 @@
-import { Bot, Cpu, ChartBar, Zap } from 'lucide-react';
+import { Bot, Cpu, Zap } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
@@ -10,7 +10,7 @@ const features = [
     description: 'Advanced IoT sensors track temperature, waste input, and biochar production with live updates and alerts',
   },
   {
-    icon: ChartBar,
+    icon: Bot,
     title: 'Smart Analytics',
     description: 'AI-powered analysis of waste composition, conversion efficiency, and environmental impact metrics',
   },

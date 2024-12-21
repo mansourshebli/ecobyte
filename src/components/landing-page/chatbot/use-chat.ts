@@ -27,7 +27,7 @@ export function useChat() {
     setTimeout(() => {
       const response: Message = {
         id: (Date.now() + 1).toString(),
-        content: getAIResponse(content),
+        content: getAIResponse(),
         type: 'assistant',
         timestamp: new Date(),
       };
@@ -39,7 +39,7 @@ export function useChat() {
   return { messages, isLoading, sendMessage };
 }
 
-function getAIResponse(input: string): string {
+function getAIResponse(): string {
   const responses = [
     "I'd be happy to tell you more about our environmental solutions. What specific aspect interests you?",
     "That's a great question about sustainability. Let me explain how our technology helps...",

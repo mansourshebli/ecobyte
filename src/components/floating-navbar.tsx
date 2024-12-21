@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
-import { Home, Leaf, Bot, BarChart3, Info, Moon, Sun, CircuitBoard } from 'lucide-react';
+import {Leaf, Bot, BarChart3, Info, Moon, Sun, CircuitBoard } from 'lucide-react';
 import { useTheme } from '@/components/theme-provider';
 import { UserNav } from './user-nav';
 import { User } from 'firebase/auth';
@@ -33,7 +33,7 @@ export function FloatingNavbar({ user, onDashboard }: FloatingNavbarProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleFeatureClick = (feature: string) => {
+  const handleFeatureClick = () => {
     if (user) {
       onDashboard?.();
     } else {
@@ -42,14 +42,10 @@ export function FloatingNavbar({ user, onDashboard }: FloatingNavbarProps) {
   };
 
   const navItems = [
-    { icon: Bot, label: 'Nova AI', feature: 'nova' },
-    { icon: BarChart3, label: 'EcoImpact', feature: 'eco-impact' },
-    { 
-      icon: CircuitBoard, 
-      label: 'Biochar Bin IoT', 
-      feature: 'biochar'
-    },
-    { icon: Leaf, label: 'ConserveAI', feature: 'conserve-ai' },
+    { icon: Bot, label: 'Nova AI' },
+    { icon: BarChart3, label: 'EcoImpact' },
+    { icon: CircuitBoard, label: 'Biochar Bin IoT' },
+    { icon: Leaf, label: 'ConserveAI' },
     { icon: Info, label: 'About', onClick: () => setShowAbout(true) },
   ];
 
@@ -67,7 +63,7 @@ export function FloatingNavbar({ user, onDashboard }: FloatingNavbarProps) {
               key={item.label}
               variant="ghost"
               size="sm"
-              onClick={() => item.onClick ? item.onClick() : handleFeatureClick(item.feature)}
+              onClick={item.onClick ? item.onClick : handleFeatureClick}
               className={cn(
                 'rounded-full text-gray-600/90 hover:bg-emerald-50/50 hover:text-emerald-600 dark:text-gray-300/90 dark:hover:bg-emerald-900/50 dark:hover:text-emerald-400',
                 'flex items-center gap-2 px-3',

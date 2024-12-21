@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { User } from 'firebase/auth';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -36,7 +36,7 @@ const generateIoTData = () => ({
   co2Offset: Math.floor(2 + Math.random() * 4),
 });
 
-export function Monitoring({ user }: MonitoringProps) {
+export function Monitoring({}: MonitoringProps) {
   const [iotData, setIoTData] = useState(generateIoTData());
   const [loading, setLoading] = useState(false);
   const [updates, setUpdates] = useState<Update[]>([]);
@@ -46,7 +46,7 @@ export function Monitoring({ user }: MonitoringProps) {
       const newData = generateIoTData();
       setIoTData(newData);
 
-      const newUpdates = [];
+      const newUpdates: Update[] = [];
       
       if (newData.temperature > 550) {
         newUpdates.push({
