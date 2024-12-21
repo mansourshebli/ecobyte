@@ -5,6 +5,7 @@ import { LandingPage } from '@/components/landing-page';
 import { LoadingScreen } from '@/components/loading-screen';
 import { auth } from '@/lib/firebase';
 import { User } from 'firebase/auth';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App() {
   const [user, setUser] = useState<User | null>(null);
@@ -52,6 +53,7 @@ export default function App() {
           user={user}
         />
       )}
+        <Analytics />
     </ThemeProvider>
   );
 }
