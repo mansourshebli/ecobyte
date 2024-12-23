@@ -44,7 +44,7 @@ export function HeroSection({ isLoaded, onDashboard }: HeroSectionProps) {
             className="border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:border-emerald-400/30 dark:bg-emerald-400/10 dark:text-emerald-400"
           >
             <Sparkles className="mr-1 h-3 w-3" />
-            Smart Waste Management
+            Powered by AI
           </Badge>
         </div>
 

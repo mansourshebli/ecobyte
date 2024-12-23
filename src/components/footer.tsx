@@ -48,8 +48,8 @@ export function Footer() {
               Eco<span className="text-emerald-600 dark:text-emerald-400">Byte</span>
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
-              Harnessing AI technology to create innovative solutions for
-              environmental challenges and promote sustainable practices globally.
+            Transforming waste management through IoT technology and AI-driven analytics to optimize 
+            biochar production and enhance carbon capture.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
