@@ -1,4 +1,4 @@
-import { Bot, Mic, NotebookPen, MessageSquare } from 'lucide-react';
+import { Bot, Mic, FileChartColumnIncreasing, BadgeInfo } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { cn } from '@/lib/utils';
 
@@ -6,17 +6,17 @@ const features = [
   {
     icon: Mic,
     title: 'Voice Interaction',
-    description: 'Natural voice commands for seamless environmental guidance',
+    description: 'Natural voice commands for seamless data access',
   },
   {
-    icon: NotebookPen,
-    title: 'Smart Note-Taking',
-    description: 'Capture and organize environmental insights effortlessly',
+    icon: FileChartColumnIncreasing,
+    title: 'A Predictions',
+    description: 'Capture and analyze data given from the bin to predict future trends',
   },
   {
-    icon: MessageSquare,
+    icon: BadgeInfo,
     title: 'Personalized Assistance',
-    description: 'Tailored environmental recommendations and reminders',
+    description: 'Tailored environmental recommendations and helpful tips',
   },
 ];
 
@@ -47,12 +47,13 @@ export function MeetNova() {
               Meet Nova
             </h2>
             <div className="mt-4 font-caveat text-2xl text-emerald-600 dark:text-emerald-400">
-              Your voice-enabled environmental companion
+              Your voice environmental companion
             </div>
             <p className="mt-6 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-              Experience a new way of environmental interaction with Nova, your personal voice assistant
-              that helps you track, understand, and improve your environmental impact through natural
-              conversations and intelligent note-taking.
+              Nova AI is your personal assistant that uses NLP to enable the ease access of
+              environmental information, bin status, and AI analyzed data. Nova AI is designed to help
+              you make better decisions for the environment, and to help you understand the impact of
+              environmental.
             </p>
 
             <div className="mt-12 grid gap-6">

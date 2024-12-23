@@ -7,14 +7,14 @@ const metrics = [
   {
     icon: Recycle,
     label: 'Waste Processed',
-    value: 25000,
+    value: 85000,
     unit: 'kg',
     color: 'bg-emerald-100 text-emerald-600 dark:bg-emerald-900/50 dark:text-emerald-400',
   },
   {
     icon: Leaf,
     label: 'CO₂ Sequestered',
-    value: 12500,
+    value: 40500,
     unit: 'kg',
     color: 'bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400',
   },
@@ -28,7 +28,7 @@ const metrics = [
   {
     icon: Factory,
     label: 'Active Installations',
-    value: 500,
+    value: 700,
     unit: 'units',
     color: 'bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-400',
   },
@@ -55,10 +55,10 @@ export function ImpactOverview() {
       <div className="container relative mx-auto px-4">
         <div className="text-center">
           <h2 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Global Environmental Impact
+            Our goal
           </h2>
           <p className="mx-auto mt-4 font-caveat text-2xl text-emerald-600 dark:text-emerald-400">
-            Real-time metrics showing our collective impact on environmental sustainability
+            Our 2030 global goals for a better sustainable future
           </p>
         </div>
 
